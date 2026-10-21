@@ -1,8 +1,10 @@
+
 numpy
 pillow
 scikit-learn
 matplotlib
-opencv-python
+opencv-python-headless
 streamlit
 torch
 torchvision
+facenet-pytorch
