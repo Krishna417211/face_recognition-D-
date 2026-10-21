@@ -5,6 +5,10 @@ import torch.nn as nn
 from PIL import ImageDraw
 from facenet_pytorch import MTCNN, InceptionResnetV1
 
+
+# Finds, crops, and straightens the face
+# Converts the cropped face into a 512-digit code
+
 torch.set_num_threads(4)
 
 THRESHOLD = 0.90          # confidence below this -> "Unknown"

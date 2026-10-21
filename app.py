@@ -27,16 +27,13 @@ def run(file):
         st.write(f"**{name}** ({conf:.0%} confidence)")
 
 
-tab1, tab2, tab3 = st.tabs(["Upload image", "Webcam", "Training accuracy"])
+tab1, tab2 = st.tabs(["Upload image","Training accuracy"])
 with tab1:
     f = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
     if f:
         run(f)
+
 with tab2:
-    cam = st.camera_input("Take a photo")
-    if cam:
-        run(cam)
-with tab3:
     if os.path.exists("accuracy.png"):
         st.image("accuracy.png")
     if os.path.exists("confusion_matrix.png"):
